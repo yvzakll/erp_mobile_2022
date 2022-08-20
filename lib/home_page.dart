@@ -6,12 +6,31 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+  HomePage({Key? key}) : super(key: key);
+  int _selectedIndex = 0;
+  PageController _pageController = PageController();
+  void onTapped(index) {
+    setState() {
+      _selectedIndex = index;
+    }
+
+    _pageController.jumpToPage(index);
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        bottomNavigationBar: BottomNavigationBar(
+          items: const <BottomNavigationBarItem>[
+            BottomNavigationBarItem(icon: Icon(Icons.rowing_sharp)),
+            BottomNavigationBarItem(icon: Icon(Icons.rowing_sharp)),
+          ],
+          currentIndex: _selectedIndex,
+          selectedItemColor: Colors.white,
+          unselectedItemColor: Colors.white,
+          onTap: onTapped,
+        ),
         body: Stack(
           children: <Widget>[
             Container(

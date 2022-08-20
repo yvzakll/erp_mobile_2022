@@ -12,7 +12,7 @@ class MyConstants {
       fontSize: 14,
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.normal,
-      color: Colors.white);
+      color: Colors.white70);
   static final miniTextInputStyle = GoogleFonts.outfit(
       fontSize: 14,
       fontStyle: FontStyle.normal,
