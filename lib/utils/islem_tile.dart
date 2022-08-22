@@ -16,7 +16,7 @@ class IslemCard extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 5, bottom: 10, right: 5, top: 10),
       child: Container(
-        padding: const EdgeInsets.all(12),
+        padding: const EdgeInsets.only(top: 20),
         decoration: BoxDecoration(
             color: const Color.fromRGBO(36, 70, 103, 1),
             boxShadow: const [
@@ -35,12 +35,15 @@ class IslemCard extends StatelessWidget {
                   borderRadius: BorderRadius.circular(0),
                   child: Image.asset(
                     cardImagePath,
-                    width: 33,
-                    height: 33,
+                    width: 53,
+                    height: 53,
                     color: Colors.white,
                   ),
                 ),
-                Text(cardName, style: MyConstants.miniTextStyle),
+                const SizedBox(
+                  height: 5,
+                ),
+                Text(cardName, style: MyConstants.miniTextStyle2),
               ],
             ),
           ],

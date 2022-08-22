@@ -1,6 +1,6 @@
 import 'dart:ui';
 
-import 'package:erp_mobile_new/home_page.dart';
+import 'package:erp_mobile_new/pages/home_page.dart';
 import 'package:erp_mobile_new/utils/constants.dart';
 import 'package:flutter/material.dart';
 

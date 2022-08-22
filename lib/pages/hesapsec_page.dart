@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:erp_mobile_new/islemler_page.dart';
+import 'package:erp_mobile_new/pages/islemler_page.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

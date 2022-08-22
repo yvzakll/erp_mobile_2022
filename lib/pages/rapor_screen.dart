@@ -1,6 +1,6 @@
 // ignore_for_file: sort_child_properties_last
 
-import 'package:erp_mobile_new/rapor_screen.dart';
+import 'package:erp_mobile_new/pages/rapor_screen.dart';
 import 'package:erp_mobile_new/utils/card_tile.dart';
 import 'package:erp_mobile_new/utils/constants.dart';
 import 'package:erp_mobile_new/utils/grid_tile.dart';

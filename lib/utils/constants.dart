@@ -13,6 +13,11 @@ class MyConstants {
       fontStyle: FontStyle.normal,
       fontWeight: FontWeight.normal,
       color: Colors.white70);
+  static final miniTextStyle2 = GoogleFonts.outfit(
+      fontSize: 17,
+      fontStyle: FontStyle.normal,
+      fontWeight: FontWeight.normal,
+      color: Colors.white70);
   static final miniTextInputStyle = GoogleFonts.outfit(
       fontSize: 14,
       fontStyle: FontStyle.normal,

@@ -1,18 +1,19 @@
 import 'package:erp_mobile_new/utils/grid_tile.dart';
 import 'package:erp_mobile_new/utils/islem_tile.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class CariIslemler extends StatefulWidget {
-  const CariIslemler({Key? key}) : super(key: key);
+class MadenScreen extends StatefulWidget {
+  const MadenScreen({Key? key}) : super(key: key);
 
   @override
-  State<CariIslemler> createState() => _CariIslemlerState();
+  State<MadenScreen> createState() => _MadenScreenState();
 }
 
 ScrollController? _scrollController1;
 
-class _CariIslemlerState extends State<CariIslemler> {
+class _MadenScreenState extends State<MadenScreen> {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -50,15 +51,15 @@ class _CariIslemlerState extends State<CariIslemler> {
                   ],
                 ),
                 Card(
-                  color: const Color.fromRGBO(83, 109, 136, 0.9),
-                  shadowColor: Colors.grey,
+                  color: const Color.fromRGBO(40, 74, 107, 1),
+                  shadowColor: Colors.black54,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16)),
+                      borderRadius: BorderRadius.circular(25)),
                   child: SizedBox(
                     height: 120,
                     width: MediaQuery.of(context).size.width * 0.9,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
                         const CircleAvatar(
                           child: Icon(
@@ -69,6 +70,7 @@ class _CariIslemlerState extends State<CariIslemler> {
                         ),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
                               "HESAP ADI",
@@ -99,75 +101,19 @@ class _CariIslemlerState extends State<CariIslemler> {
                   ),
                 ),
                 Card(
-                  color: const Color.fromRGBO(83, 109, 136, 0.9),
-                  shadowColor: Colors.grey,
+                  color: const Color.fromRGBO(40, 74, 107, 1),
+                  shadowColor: Colors.black54,
                   shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16)),
-                  child: SizedBox(
-                    height: 220,
-                    width: MediaQuery.of(context).size.width * 0.9,
-                  ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height,
-                  child: GridView.count(
-                    primary: false,
-                    padding: const EdgeInsets.all(5),
-                    crossAxisSpacing: 0,
-                    mainAxisSpacing: 0,
-                    crossAxisCount: 3,
-                    children: <Widget>[
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Maden",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Hurda",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Nakit",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Hizmet",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Vadeli",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Model",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Transfer",
-                        ),
-                      ),
-                      GestureDetector(
-                        child: const IslemCard(
-                          cardImagePath: "assets/icons/books.png",
-                          cardName: "Geçmis",
-                        ),
+                      borderRadius: BorderRadius.circular(25)),
+                  child: Stack(
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.8,
+                        width: MediaQuery.of(context).size.width * 0.9,
                       ),
                     ],
                   ),
-                )
+                ),
               ],
             ),
           ),

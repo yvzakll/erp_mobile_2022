@@ -1,5 +1,6 @@
-import 'package:erp_mobile_new/hesapsec_page.dart';
-import 'package:erp_mobile_new/rapor_screen.dart';
+import 'package:erp_mobile_new/pages/hesapsec_page.dart';
+import 'package:erp_mobile_new/pages/rapor_screen.dart';
+
 import 'package:erp_mobile_new/utils/card_tile.dart';
 import 'package:erp_mobile_new/utils/grid_tile.dart';
 import 'package:flutter/material.dart';
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        bottomNavigationBar: BottomNavigationBar(
+        /*  bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.rowing_sharp)),
             BottomNavigationBarItem(icon: Icon(Icons.rowing_sharp)),
@@ -30,7 +31,7 @@ class HomePage extends StatelessWidget {
           selectedItemColor: Colors.white,
           unselectedItemColor: Colors.white,
           onTap: onTapped,
-        ),
+        ), */
         body: Stack(
           children: <Widget>[
             Container(
