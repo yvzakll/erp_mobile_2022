@@ -3,13 +3,18 @@ import 'package:erp_mobile_new/pages/rapor_screen.dart';
 
 import 'package:erp_mobile_new/utils/card_tile.dart';
 import 'package:erp_mobile_new/utils/grid_tile.dart';
+import 'package:erp_mobile_new/utils/my_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+// ignore: must_be_immutable
 class HomePage extends StatelessWidget {
+  // ignore: unnecessary_new
+  final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   HomePage({Key? key}) : super(key: key);
+  // ignore: unused_field
   int _selectedIndex = 0;
-  PageController _pageController = PageController();
+  final PageController _pageController = PageController();
   void onTapped(index) {
     setState() {
       _selectedIndex = index;
@@ -22,6 +27,8 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        key: _scaffoldKey,
+        drawer: const MyDrawer(),
         /*  bottomNavigationBar: BottomNavigationBar(
           items: const <BottomNavigationBarItem>[
             BottomNavigationBarItem(icon: Icon(Icons.rowing_sharp)),
@@ -49,7 +56,9 @@ class HomePage extends StatelessWidget {
                       IconButton(
                         icon: const Icon(Icons.drag_handle_rounded,
                             color: Colors.white),
-                        onPressed: () {},
+                        onPressed: () {
+                          _scaffoldKey.currentState?.openDrawer();
+                        },
                       ),
                       Padding(
                         padding: const EdgeInsets.only(top: 10.0, left: 100),
